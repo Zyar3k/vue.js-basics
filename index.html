@@ -45,6 +45,7 @@
   <h1>hello</h1>
   <div id="app">
     <a :href="url">my portfolio</a>
+
     <div v-if='showContent'>
       <ul>
         <li @click='toggleFav(movie)' v-for='movie in movies' :class="{fav: movie.isFav}">

@@ -36,6 +36,11 @@ const app = Vue.createApp({
       data.isFav = !data.isFav;
     },
   },
+  computed: {
+    filteredMovies() {
+      return this.movies.filter((movie) => movie.isFav);
+    },
+  },
 });
 
 app.mount("#app");
