@@ -9,13 +9,34 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
   <script src="https://unpkg.com/vue@3.0.2"></script>
   <style>
-    .box {
-      padding: 100px 0;
-      width: 400px;
-      text-align: center;
-      background-color: #ddd;
-      margin: 20px;
-      display: inline-block;
+    .body {
+      background-color: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+
+    p,
+    h2,
+    h3,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+    }
+
+    li.fav {
+      background-color: #ff9ed2;
+      color: white;
     }
   </style>
 </head>
@@ -26,10 +47,11 @@
     <a :href="url">my portfolio</a>
     <div v-if='showContent'>
       <ul>
-        <li v-for='item in movies'>
-          <img :src="item.img" :alt="item.title">
-          <h3>{{item.title}}</h3>
-          <p>{{item.author}} - {{item.premiere}}</p>
+        <li v-for='movie in movies' :class="{fav: movie.isFav}">
+          <img :src="movie.img" :alt="movie.title">
+          <h2>{{movie.title}}</h2>
+          <h3>{{movie.author}}</h3>
+          <p>Premiere {{movie.premiere}}</p>
         </li>
       </ul>
 

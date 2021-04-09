@@ -9,18 +9,21 @@ const app = Vue.createApp({
           author: "Francis Ford Coppola",
           premiere: 1972,
           img: "assets/g1.jpg",
+          isFav: true,
         },
         {
           title: "Godfather 2",
           author: "Francis Ford Coppola",
           premiere: 1974,
           img: "assets/g2.jpg",
+          isFav: false,
         },
         {
           title: "Godfather 3",
           author: "Francis Ford Coppola",
           premiere: 1990,
           img: "assets/g3.jpg",
+          isFav: false,
         },
       ],
     };
