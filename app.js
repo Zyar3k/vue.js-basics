@@ -2,30 +2,28 @@ const app = Vue.createApp({
   data() {
     return {
       showContent: true,
-      title: "the Godfather",
-      author: "Mario Puzo",
-      age: 18,
-      x: 0,
-      y: 0,
+      movies: [
+        {
+          title: "the Godfather",
+          author: "Francis Ford Coppola",
+          premiere: 1972,
+        },
+        {
+          title: "the Godfather 2",
+          author: "Francis Ford Coppola",
+          premiere: 1974,
+        },
+        {
+          title: "the Godfather 3",
+          author: "Francis Ford Coppola",
+          premiere: 1990,
+        },
+      ],
     };
   },
   methods: {
-    changeTitle(title) {
-      // this.title = "Buh bub blur";
-      this.title = "Mandana";
-    },
     toggleShowContent() {
       this.showContent = !this.showContent;
-    },
-    handleEvent(e, data) {
-      console.log(e, e.type);
-      if (data) {
-        console.log(data);
-      }
-    },
-    handleMousemove(e) {
-      this.x = e.offsetX;
-      this.y = e.offsetY;
     },
   },
 });

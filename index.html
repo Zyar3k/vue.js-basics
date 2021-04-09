@@ -24,19 +24,18 @@
   <h1>hello</h1>
   <div id="app">
     <div v-if='showContent'>
-      <h3>{{title}} - {{author}} - {{age}} </h3>
+      <ul>
+        <li v-for='item in movies'>
+          <h3>{{item.title}} - {{item.author}} - {{item.premiere}} </h3>
+        </li>
+      </ul>
+
     </div>
     <button @click='toggleShowContent'>
       <span v-if="showContent">Hide Content</span>
       <span v-else>Show Content</span>
     </button>
 
-    <br>
-
-    <div class="box" @mouseover='handleEvent($event, 5)'>mouseover (enter)</div>
-    <div class="box" @mouseleave='handleEvent'>mouseleave</div>
-    <div class="box" @dblclick='handleEvent'>double click</div>
-    <div class="box" @mousemove='handleMousemove'>position {{x}} : {{y}} </div>
   </div>
 
   <script src="app.js"></script>
