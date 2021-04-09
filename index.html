@@ -47,7 +47,7 @@
     <a :href="url">my portfolio</a>
     <div v-if='showContent'>
       <ul>
-        <li v-for='movie in movies' :class="{fav: movie.isFav}">
+        <li @click='toggleFav(movie)' v-for='movie in movies' :class="{fav: movie.isFav}">
           <img :src="movie.img" :alt="movie.title">
           <h2>{{movie.title}}</h2>
           <h3>{{movie.author}}</h3>

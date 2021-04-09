@@ -32,6 +32,9 @@ const app = Vue.createApp({
     toggleShowContent() {
       this.showContent = !this.showContent;
     },
+    toggleFav(data) {
+      data.isFav = !data.isFav;
+    },
   },
 });
 
