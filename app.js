@@ -5,6 +5,8 @@ const app = Vue.createApp({
       title: "the Godfather",
       author: "Mario Puzo",
       age: 18,
+      x: 0,
+      y: 0,
     };
   },
   methods: {
@@ -14,6 +16,16 @@ const app = Vue.createApp({
     },
     toggleShowContent() {
       this.showContent = !this.showContent;
+    },
+    handleEvent(e, data) {
+      console.log(e, e.type);
+      if (data) {
+        console.log(data);
+      }
+    },
+    handleMousemove(e) {
+      this.x = e.offsetX;
+      this.y = e.offsetY;
     },
   },
 });
