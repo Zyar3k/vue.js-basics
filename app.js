@@ -1,6 +1,11 @@
 const app = Vue.createApp({
-  // data, functions
-  // template: "<h2>Template h2</h2>",
+  data() {
+    return {
+      title: "the Godfather",
+      author: "Mario Puzo",
+      age: 18,
+    };
+  },
 });
 
 app.mount("#app");
