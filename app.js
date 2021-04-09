@@ -1,22 +1,26 @@
 const app = Vue.createApp({
   data() {
     return {
+      url: "https://zyar3k.github.io/portfolio/",
       showContent: true,
       movies: [
         {
-          title: "the Godfather",
+          title: "Godfather",
           author: "Francis Ford Coppola",
           premiere: 1972,
+          img: "assets/g1.jpg",
         },
         {
-          title: "the Godfather 2",
+          title: "Godfather 2",
           author: "Francis Ford Coppola",
           premiere: 1974,
+          img: "assets/g2.jpg",
         },
         {
-          title: "the Godfather 3",
+          title: "Godfather 3",
           author: "Francis Ford Coppola",
           premiere: 1990,
+          img: "assets/g3.jpg",
         },
       ],
     };

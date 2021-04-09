@@ -23,10 +23,13 @@
 <body>
   <h1>hello</h1>
   <div id="app">
+    <a :href="url">my portfolio</a>
     <div v-if='showContent'>
       <ul>
         <li v-for='item in movies'>
-          <h3>{{item.title}} - {{item.author}} - {{item.premiere}} </h3>
+          <img :src="item.img" :alt="item.title">
+          <h3>{{item.title}}</h3>
+          <p>{{item.author}} - {{item.premiere}}</p>
         </li>
       </ul>
 
